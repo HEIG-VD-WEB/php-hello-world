@@ -1,0 +1,19 @@
+{
+	"name": "PHP",
+	"image": "mcr.microsoft.com/devcontainers/php:1-8.2-bullseye",
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+		8080
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"DEVSENSE.phptools-vscode",
+				"GitHub.copilot"
+			]
+		}
+	},
+	"mounts": [
+		"type=bind,source=${localEnv:HOME}/.ssh,target=${localEnv:HOME}/.ssh,type=bind,consistency=cached"
+	]
+}
